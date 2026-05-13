@@ -1,0 +1,2015 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olanrewaju Ogunkoya | Senior Software Developer</title>
+    <meta name="description"
+        content="Portfolio of Olanrewaju Ogunkoya - Software Developer with 5+ years of experience in React, Node.js, and modern web technologies.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        void: '#020204',
+                        'deep-purple': '#1a0b2e',
+                        'deep-blue': '#0c1224',
+                        'neon-cyan': '#00f0ff',
+                        'neon-magenta': '#ff00aa',
+                        'neon-violet': '#a855f7',
+                        'neon-blue': '#3b82f6',
+                        'surface': 'rgba(26, 11, 46, 0.6)',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'float-delayed': 'float 100s ease-in-out 100s infinite',
+                        'pulse-slow': 'pulse 100s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'gradient-x': 'gradient-x 15s ease infinite',
+                        'spin-slow': 'spin 200s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        'gradient-x': {
+                            '0%, 100%': { 'background-position': '0% 50%' },
+                            '50%': { 'background-position': '100% 50%' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <div class="whatsapp-float-container">
+        <a href="https://wa.me/2347069168574?text=hey%20i%20saw%20your%20website%20ill%20like%20to%20purchase%20a%20website"
+            target="_blank" class="whatsapp-float">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
+                <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413" />
+            </svg>
+        </a>
+
+        <style>
+            .whatsapp-float {
+                position: fixed;
+                bottom: 24px;
+                right: 24px;
+                background: #25D366;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+                z-index: 9999;
+                transition: transform 0.2s;
+            }
+
+            .whatsapp-float:hover {
+                transform: scale(1.1);
+            }
+        </style>
+    </div>
+    <style>
+        :root {
+            --void: #020204;
+            --deep-purple: #1a0b2e;
+            --deep-blue: #0c1224;
+            --neon-cyan: #00f0ff;
+            --neon-magenta: #ff00aa;
+            --neon-violet: #a855f7;
+        }
+
+        body {
+            background-color: var(--void);
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--void);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, var(--neon-violet), var(--neon-cyan));
+            border-radius: 4px;
+        }
+
+        /* Gradient Text */
+        .gradient-text {
+            background: linear-gradient(135deg, #00f0ff 0%, #a855f7 50%, #ff00aa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gradient-text-alt {
+            background: linear-gradient(90deg, #a855f7, #00f0ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Glassmorphism */
+        .glass {
+            background: rgba(26, 11, 46, 0.4);
+            backdrop-filter: blur(90px);
+            -webkit-backdrop-filter: blur(90px);
+            border: 1px solid rgba(168, 85, 247, 0.1);
+        }
+
+        #siteHeader {
+            position: fixed;
+            inset: 0 0 auto 0;
+            height: 72px;
+            padding: 0 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 999;
+
+            /* The glass */
+            background: linear-gradient(180deg, rgba(20, 20, 20, 0.85), rgba(20, 20, 20, 0.6));
+            backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+            -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+            border-bottom: 1px solid var(--glass-border);
+
+            /* Spring entrance */
+            animation: springDown 0.8s var(--spring) both;
+            transform: translateZ(0);
+            will-change: transform;
+            transition: transform 0.5s var(--spring), background 0.3s ease;
+        }
+
+        /* Hide on scroll down, show on scroll up */
+        #siteHeader.hidden {
+            transform: translateY(-100%);
+        }
+
+        /* Darker when scrolled */
+        #siteHeader.scrolled {
+            background: linear-gradient(180deg, rgba(10, 10, 10, 0.95), rgba(10, 10, 10, 0.9));
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        #siteHeader a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 100px;
+            position: relative;
+            transition: all 0.35s var(--spring);
+            transform: translateZ(0);
+        }
+
+        #siteHeader a::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 100px;
+            transform: scale(0.7);
+            opacity: 0;
+            transition: all 0.4s var(--spring);
+        }
+
+        #siteHeader a:hover {
+            color: #fff;
+            transform: translateY(-1px);
+            background: linear-gradient(180deg, rgba(20, 20, 20, 0.85), rgba(20, 20, 20, 0.6));
+            backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+            -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        #siteHeader a:hover::before {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        #siteHeader a:active {
+            transform: scale(0.95);
+            transition-duration: 0.1s;
+        }
+
+        .glass-strong {
+            background: rgba(12, 18, 36, 0.7);
+            backdrop-filter: blur(100px);
+            -webkit-backdrop-filter: blur(90px);
+            border: 1px solid rgba(168, 85, 247, 0.15);
+        }
+
+        /* Gradient Border */
+        .gradient-border {
+            position: relative;
+            background: rgba(26, 11, 46, 0.6);
+            border-radius: 16px;
+        }
+
+        .gradient-border::before {
+            content: "";
+            position: absolute;
+            inset: -1px;
+            border-radius: 17px;
+            padding: 1px;
+            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-violet), var(--neon-magenta));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+            opacity: 0.8;
+            transition: opacity 0.8s ease;
+        }
+
+        .gradient-border:hover::before {
+            opacity: 1;
+        }
+
+        /* Promote animated elements to their own layer */
+        header,
+        .reveal,
+        a,
+        button,
+        img {
+            transform: translateZ(0);
+        }
+
+        /* Prevent layout shift during animations */
+        * {
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* iOS momentum scroll */
+        html {
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /* Respect reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+
+        /* Animated Background Mesh */
+        .mesh-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(90px);
+            opacity: 0.25;
+            animation: float 20ease-in-out infinite;
+        }
+
+        .orb-1 {
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, var(--neon-violet), transparent 70%);
+            top: -10%;
+            left: -10%;
+            animation-delay: 0s;
+        }
+
+        .orb-2 {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, var(--neon-cyan), transparent 70%);
+            top: 40%;
+            right: -15%;
+            animation-delay: -5s;
+        }
+
+        .orb-3 {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, var(--neon-magenta), transparent 70%);
+            bottom: -10%;
+            left: 30%;
+            animation-delay: -2s;
+        }
+
+        .orb-4 {
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, #3b82f6, transparent 70%);
+            top: 60%;
+            left: -5%;
+            animation-delay: -7s;
+        }
+
+        /* Noise Texture Overlay */
+        .noise {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.03;
+            z-index: -1;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+
+        /* Cursor Glow */
+        .cursor-glow {
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(168, 85, 247, 0.15), transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+            transform: translate(-50%, -50%);
+            transition: opacity 1.8s ease;
+        }
+
+        /* Magnetic Button */
+        .magnetic-btn {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        /* 3D Tilt Card */
+        .tilt-card {
+            transform-style: preserve-3d;
+            transition: transform 0.1s ease-out;
+        }
+
+        .tilt-card-content {
+            transform: translateZ(30px);
+        }
+
+        /* Typing Cursor */
+        .typing-cursor::after {
+            content: '|';
+            animation: blink 1s step-end infinite;
+            color: var(--neon-cyan);
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        /* Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Skill Bar Animation */
+        .skill-bar-fill {
+            width: 0;
+            transition: width 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .skill-bar-fill.active {
+            width: var(--target-width);
+        }
+
+        /* Calendar Styles */
+        .calendar-day {
+            transition: all 0.2s ease;
+        }
+
+        .calendar-day:hover:not(.disabled) {
+            background: rgba(168, 85, 247, 0.2);
+            transform: scale(1.1);
+        }
+
+        .calendar-day.selected {
+            background: linear-gradient(135deg, var(--neon-violet), var(--neon-cyan));
+            color: white;
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+        }
+
+        .calendar-day.disabled {
+            opacity: 0.2;
+            cursor: not-allowed;
+        }
+
+        /* Time Slot */
+        .time-slot {
+            transition: all 0.2s ease;
+            border: 1px solid rgba(168, 85, 247, 0.2);
+        }
+
+        .time-slot:hover {
+            border-color: var(--neon-cyan);
+            background: rgba(0, 240, 255, 0.1);
+            transform: translateX(5px);
+        }
+
+        .time-slot.selected {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.3), rgba(0, 240, 255, 0.3));
+            border-color: var(--neon-cyan);
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+        }
+
+        /* Form Input Focus */
+        .form-input {
+            background: rgba(26, 11, 46, 0.5);
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--neon-cyan);
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.1);
+            background: rgba(26, 11, 46, 0.8);
+        }
+
+        /* Nav Link Underline */
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--neon-cyan), var(--neon-violet));
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Project Card Image Overlay */
+        .project-img-overlay {
+            background: linear-gradient(to top, rgba(2, 2, 4, 0.95) 0%, rgba(2, 2, 4, 0.5) 50%, transparent 100%);
+        }
+
+        /* Blog Card Hover */
+        .blog-card {
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(168, 85, 247, 0.2);
+        }
+
+        .blog-card:hover .blog-img {
+            transform: scale(1.1);
+        }
+
+        /* Success Modal */
+        .modal-overlay {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.open {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .modal-content {
+            transform: scale(0.9) translateY(20px);
+            transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .modal-overlay.open .modal-content {
+            transform: scale(1) translateY(0);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+
+        /* Section divider */
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.3), rgba(0, 240, 255, 0.3), transparent);
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased selection:bg-neon-violet selection:text-white">
+
+    <!-- Background Effects -->
+    <div class="mesh-bg">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="orb orb-4"></div>
+    </div>
+    <div class="noise"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="font-display font-bold text-2xl tracking-tight">
+                    <span class="gradient-text">OO</span>
+                </a>
+
+                <!-- Desktop Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about"
+                        class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors">About</a>
+                    <a href="#skills"
+                        class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors">Skills</a>
+                    <a href="#projects"
+                        class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors">Projects</a>
+                    <a href="#blog"
+                        class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors">Blog</a>
+                    <a href="#booking"
+                        class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors">Book a
+                        Call</a>
+                    <a href="#contact"
+                        class="magnetic-btn px-6 py-2.5 rounded-full bg-gradient-to-r from-neon-violet to-neon-cyan text-void font-semibold text-sm hover:shadow-lg hover:shadow-neon-violet/25 transition-shadow">
+                        Contact Me
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-white p-2">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu fixed inset-0 z-50 bg-void/95 backdrop-blur-xl md:hidden">
+        <div class="flex flex-col items-center justify-center h-full space-y-8">
+            <button id="closeMobileMenu" class="absolute top-6 right-6 text-white p-2">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+            <a href="#about"
+                class="text-2xl font-display font-medium text-white hover:text-neon-cyan transition-colors mobile-link">About</a>
+            <a href="#skills"
+                class="text-2xl font-display font-medium text-white hover:text-neon-cyan transition-colors mobile-link">Skills</a>
+            <a href="#projects"
+                class="text-2xl font-display font-medium text-white hover:text-neon-cyan transition-colors mobile-link">Projects</a>
+            <a href="#blog"
+                class="text-2xl font-display font-medium text-white hover:text-neon-cyan transition-colors mobile-link">Blog</a>
+            <a href="#booking"
+                class="text-2xl font-display font-medium text-white hover:text-neon-cyan transition-colors mobile-link">Book
+                a Call</a>
+            <a href="#contact"
+                class="text-2xl font-display font-medium text-white hover:text-neon-cyan transition-colors mobile-link">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
+        <div class="max-w-7xl mx-auto w-full pt-20">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="order-2 lg:order-1 text-center lg:text-left">
+                    <div class="reveal" style="transition-delay: 0.1s">
+                        <p class="text-neon-cyan font-medium mb-4 tracking-widest uppercase text-sm">Software Developer
+                        </p>
+                    </div>
+
+                    <h1 class="reveal font-display font-bold text-5xl md:text-7xl lg:text-8xl leading-none mb-6"
+                        style="transition-delay: 0.2s">
+                        <span class="text-white">Olanrewaju</span><br>
+                        <span class="gradient-text">Ogunkoya</span>
+                    </h1>
+
+                    <div class="reveal h-8 mb-8" style="transition-delay: 0.3s">
+                        <p class="text-xl md:text-2xl text-gray-400 font-light">
+                            I build <span id="typingText" class="typing-cursor text-white font-medium"></span>
+                        </p>
+                    </div>
+
+                    <div class="reveal flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+                        style="transition-delay: 0.4s">
+                        <a href="#projects"
+                            class="magnetic-btn group px-8 py-4 rounded-full bg-gradient-to-r from-neon-violet to-neon-cyan text-void font-bold hover:shadow-2xl hover:shadow-neon-violet/30 transition-all">
+                            View My Work
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#booking"
+                            class="magnetic-btn px-8 py-4 rounded-full glass text-white font-semibold hover:bg-white/10 transition-all border border-white/10">
+                            <i class="fas fa-calendar-alt mr-2"></i>
+                            Schedule a Call
+                        </a>
+                    </div>
+
+                    <div class="reveal mt-12 flex items-center justify-center lg:justify-start gap-6"
+                        style="transition-delay: 0.5s">
+                        <a href="#" class="text-gray-400 hover:text-neon-cyan transition-colors text-xl"><i
+                                class="fab fa-github"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-neon-cyan transition-colors text-xl"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-neon-cyan transition-colors text-xl"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-neon-cyan transition-colors text-xl"><i
+                                class="fab fa-dev"></i></a>
+                        <div class="h-px w-12 bg-gradient-to-r from-neon-violet to-transparent"></div>
+                        <span class="text-gray-500 text-sm">5+ Years Experience</span>
+                    </div>
+                </div>
+
+                <!-- Visual Element -->
+                <div class="order-1 lg:order-2 flex justify-center reveal" style="transition-delay: 0.3s">
+                    <div class="relative w-72 h-72 md:w-96 md:h-96">
+                        <!-- Rotating Rings -->
+                        <div class="absolute inset-0 rounded-full border border-neon-violet/20 animate-spin-slow"></div>
+                        <div class="absolute inset-4 rounded-full border border-neon-cyan/20 animate-spin-slow"
+                            style="animation-direction: reverse; animation-duration: 25s;"></div>
+                        <div class="absolute inset-8 rounded-full border border-neon-magenta/20 animate-spin-slow"
+                            style="animation-duration: 30s;"></div>
+
+                        <!-- Center Content -->
+                        <div
+                            class="absolute inset-12 rounded-full glass-strong flex items-center justify-center overflow-hidden">
+                            <div class="text-center">
+                                <div class="text-6xl md:text-7xl font-display font-bold gradient-text mb-2">5+</div>
+                                <div class="text-sm text-gray-400 uppercase tracking-widest">Years</div>
+                            </div>
+                            <!-- Inner gradient glow -->
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-neon-violet/20 to-neon-cyan/20 rounded-full">
+                            </div>
+                        </div>
+
+                        <!-- Floating Badges -->
+                        <div
+                            class="absolute -top-4 left-1/2 -translate-x-1/2 glass px-4 py-2 rounded-full text-xs font-semibold text-neon-cyan animate-float">
+                            <i class="fab fa-react mr-1"></i> React
+                        </div>
+                        <div class="absolute top-1/2 -right-4 -translate-y-1/2 glass px-4 py-2 rounded-full text-xs font-semibold text-neon-magenta animate-float"
+                            style="animation-delay: 1s">
+                            <i class="fab fa-node mr-1"></i> Node.js
+                        </div>
+                        <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 glass px-4 py-2 rounded-full text-xs font-semibold text-neon-violet animate-float"
+                            style="animation-delay: 2s">
+                            <i class="fas fa-code mr-1"></i> TypeScript
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+            <div class="w-6 h-10 rounded-full border-2 border-white/20 flex justify-center pt-2">
+                <div class="w-1 h-2 bg-neon-cyan rounded-full animate-pulse"></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-4xl mx-auto"></div>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <p class="text-neon-cyan font-medium mb-2 tracking-widest uppercase text-sm">About Me</p>
+                    <h2 class="font-display font-bold text-4xl md:text-5xl text-white mb-6">
+                        Turning complex<br>problems into <span class="gradient-text">elegant code</span>
+                    </h2>
+                    <div class="space-y-4 text-gray-400 leading-relaxed">
+                        <p>
+                            I'm Olanrewaju Ogunkoya, a passionate software developer with over 5 years of hands-on
+                            experience
+                            building scalable web applications and digital experiences that make a real impact.
+                        </p>
+                        <p>
+                            My expertise spans the full JavaScript ecosystem — from crafting pixel-perfect React
+                            interfaces
+                            to architecting robust Node.js backends. I thrive in environments where innovation meets
+                            reliability, and I'm obsessed with writing clean, maintainable code.
+                        </p>
+                        <p>
+                            When I'm not coding, you'll find me exploring new technologies, contributing to open-source,
+                            or mentoring upcoming developers. I believe great software is built at the intersection of
+                            technical excellence and human-centered design.
+                        </p>
+                    </div>
+
+                    <div class="mt-8 grid grid-cols-3 gap-6">
+                        <div class="text-center p-4 glass rounded-xl">
+                            <div class="text-3xl font-display font-bold gradient-text mb-1">50+</div>
+                            <div class="text-xs text-gray-500 uppercase tracking-wider">Projects</div>
+                        </div>
+                        <div class="text-center p-4 glass rounded-xl">
+                            <div class="text-3xl font-display font-bold gradient-text mb-1">5+</div>
+                            <div class="text-xs text-gray-500 uppercase tracking-wider">Years</div>
+                        </div>
+                        <div class="text-center p-4 glass rounded-xl">
+                            <div class="text-3xl font-display font-bold gradient-text mb-1">20+</div>
+                            <div class="text-xs text-gray-500 uppercase tracking-wider">Clients</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal relative" style="transition-delay: 0.2s">
+                    <div class="gradient-border p-1">
+                        <div class="bg-deep-purple/50 rounded-2xl p-8 relative overflow-hidden">
+                            <!-- Code Window Decoration -->
+                            <div class="flex items-center gap-2 mb-6">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                <div class="ml-4 text-xs text-gray-500 font-mono">about.js</div>
+                            </div>
+
+                            <div class="font-mono text-sm space-y-2">
+                                <div class="text-gray-500">// My developer profile</div>
+                                <div><span class="text-neon-magenta">const</span> <span
+                                        class="text-neon-cyan">developer</span> = {</div>
+                                <div class="pl-4"><span class="text-white">name</span>: <span
+                                        class="text-green-400">"Olanrewaju Ogunkoya"</span>,</div>
+                                <div class="pl-4"><span class="text-white">role</span>: <span
+                                        class="text-green-400">"Full Stack Developer"</span>,</div>
+                                <div class="pl-4"><span class="text-white">experience</span>: <span
+                                        class="text-orange-400">5</span>,</div>
+                                <div class="pl-4"><span class="text-white">stack</span>: [<span
+                                        class="text-green-400">"React"</span>, <span
+                                        class="text-green-400">"Node.js"</span>, <span
+                                        class="text-green-400">"TypeScript"</span>],</div>
+                                <div class="pl-4"><span class="text-white">passion</span>: <span
+                                        class="text-green-400">"Building the future"</span>,</div>
+                                <div class="pl-4"><span class="text-white">available</span>: <span
+                                        class="text-neon-violet">true</span></div>
+                                <div>};</div>
+                                <div class="mt-4"><span class="text-neon-magenta">export default</span> <span
+                                        class="text-neon-cyan">developer</span>;</div>
+                            </div>
+
+                            <!-- Glow effect -->
+                            <div
+                                class="absolute -bottom-20 -right-20 w-40 h-40 bg-neon-violet/20 rounded-full blur-3xl">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating decoration -->
+                    <div
+                        class="absolute -top-6 -right-6 w-24 h-24 bg-gradient-to-br from-neon-cyan to-neon-violet rounded-2xl opacity-20 blur-xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-4xl mx-auto"></div>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <p class="text-neon-cyan font-medium mb-2 tracking-widest uppercase text-sm">Expertise</p>
+                <h2 class="font-display font-bold text-4xl md:text-5xl text-white mb-4">
+                    Skills & <span class="gradient-text">Technologies</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">My technical toolkit is built on modern, battle-tested
+                    technologies that power today's best web applications.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Skill Cards -->
+                <div class="reveal gradient-border p-6 group hover:scale-[1.02] transition-transform duration-300"
+                    style="transition-delay: 0.1s">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400">
+                                <i class="fab fa-react text-xl"></i>
+                            </div>
+
+                            <span class="font-semibold text-white">HTML</span>
+                        </div>
+                        <span class="text-neon-cyan font-mono text-sm">95%</span>
+                    </div>
+                    <div class="h-2 bg-white/5 rounded-full overflow-hidden">
+                        <div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-blue-500 to-neon-cyan"
+                            style="--target-width: 95%"></div>
+                    </div>
+                </div>
+                <div class="reveal gradient-border p-6 group hover:scale-[1.02] transition-transform duration-300"
+                    style="transition-delay: 0.25s">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-orange-500/20 flex items-center justify-center text-orange-400">
+                                <i class="fab fa-git-alt text-xl"></i>
+                            </div>
+                            <span class="font-semibold text-white">CSS</span>
+                        </div>
+                        <span class="text-neon-cyan font-mono text-sm">90%</span>
+                    </div>
+                    <div class="h-2 bg-white/5 rounded-full overflow-hidden">
+                        <div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-orange-500 to-neon-magenta"
+                            style="--target-width: 88%"></div>
+                    </div>
+                </div>
+
+                <div class="reveal gradient-border p-6 group hover:scale-[1.02] transition-transform duration-300"
+                    style="transition-delay: 0.3s">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center text-purple-400">
+                                <i class="fas fa-database text-xl"></i>
+                            </div>
+                            <span class="font-semibold text-white">Javascript</span>
+                        </div>
+                        <span class="text-neon-cyan font-mono text-sm">85%</span>
+                    </div>
+                    <div class="h-2 bg-white/5 rounded-full overflow-hidden">
+                        <div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-purple-500 to-neon-violet"
+                            style="--target-width: 85%"></div>
+                    </div>
+                </div>
+
+                <div class="reveal gradient-border p-6 group hover:scale-[1.02] transition-transform duration-300"
+                    style="transition-delay: 0.35s">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-cyan-500/20 flex items-center justify-center text-cyan-400">
+                                <i class="fas fa-cloud text-xl"></i>
+                            </div>
+                            <span class="font-semibold text-white">React</span>
+                        </div>
+                        <span class="text-neon-cyan font-mono text-sm">82%</span>
+                    </div>
+                    <div class="h-2 bg-white/5 rounded-full overflow-hidden">
+                        <div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-cyan-500 to-neon-cyan"
+                            style="--target-width: 82%"></div>
+                    </div>
+                </div>
+                <div class="reveal gradient-border p-6 group hover:scale-[1.02] transition-transform duration-300"
+                    style="transition-delay: 0.15s">
+
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-green-500/20 flex items-center justify-center text-green-400">
+                                <i class="fab fa-node text-xl"></i>
+                            </div>
+                            <span class="font-semibold text-white">Node.js</span>
+                        </div>
+                        <span class="text-neon-cyan font-mono text-sm">92%</span>
+                    </div>
+                    <div class="h-2 bg-white/5 rounded-full overflow-hidden">
+                        <div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-green-500 to-neon-cyan"
+                            style="--target-width: 92%"></div>
+                    </div>
+                </div>
+
+                <div class="reveal gradient-border p-6 group hover:scale-[1.02] transition-transform duration-300"
+                    style="transition-delay: 0.2s">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-blue-400/20 flex items-center justify-center text-blue-300">
+                                <i class="fab fa-js text-xl"></i>
+                            </div>
+                            <span class="font-semibold text-white">TypeScript</span>
+                        </div>
+                        <span class="text-neon-cyan font-mono text-sm">90%</span>
+                    </div>
+                    <div class="h-2 bg-white/5 rounded-full overflow-hidden">
+                        <div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-blue-400 to-neon-violet"
+                            style="--target-width: 90%"></div>
+                    </div>
+                </div>
+
+                <div class="reveal gradient-border p-6 group hover:scale-[1.02] transition-transform duration-300"
+                    style="transition-delay: 0.25s">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-orange-500/20 flex items-center justify-center text-orange-400">
+                                <i class="fab fa-git-alt text-xl"></i>
+                            </div>
+                            <span class="font-semibold text-white">Git & DevOps</span>
+                        </div>
+                        <span class="text-neon-cyan font-mono text-sm">88%</span>
+                    </div>
+                    <div class="h-2 bg-white/5 rounded-full overflow-hidden">
+                        <div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-orange-500 to-neon-magenta"
+                            style="--target-width: 88%"></div>
+                    </div>
+                </div>
+
+                <div class="reveal gradient-border p-6 group hover:scale-[1.02] transition-transform duration-300"
+                    style="transition-delay: 0.3s">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center text-purple-400">
+                                <i class="fas fa-database text-xl"></i>
+                            </div>
+                            <span class="font-semibold text-white">Databases</span>
+                        </div>
+                        <span class="text-neon-cyan font-mono text-sm">85%</span>
+                    </div>
+                    <div class="h-2 bg-white/5 rounded-full overflow-hidden">
+                        <div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-purple-500 to-neon-violet"
+                            style="--target-width: 85%"></div>
+                    </div>
+                </div>
+
+                <div class="reveal gradient-border p-6 group hover:scale-[1.02] transition-transform duration-300"
+                    style="transition-delay: 0.35s">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-cyan-500/20 flex items-center justify-center text-cyan-400">
+                                <i class="fas fa-cloud text-xl"></i>
+                            </div>
+                            <span class="font-semibold text-white">Cloud & AWS</span>
+                        </div>
+                        <span class="text-neon-cyan font-mono text-sm">82%</span>
+                    </div>
+                    <div class="h-2 bg-white/5 rounded-full overflow-hidden">
+                        <div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-cyan-500 to-neon-cyan"
+                            style="--target-width: 82%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-4xl mx-auto"></div>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <p class="text-neon-cyan font-medium mb-2 tracking-widest uppercase text-sm">Portfolio</p>
+                <h2 class="font-display font-bold text-4xl md:text-5xl text-white mb-4">
+                    Featured <span class="gradient-text">Projects</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">A selection of projects that showcase my expertise in
+                    building modern, scalable applications.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="reveal tilt-card gradient-border overflow-hidden group" style="transition-delay: 0.1s">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-neon-violet/30 to-neon-cyan/30"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-shopping-cart text-6xl text-white/20"></i>
+                        </div>
+                        <div class="project-img-overlay absolute inset-0"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <div class="flex gap-2">
+                                <span
+                                    class="px-2 py-1 text-xs rounded-md bg-neon-violet/20 text-neon-violet border border-neon-violet/30">React</span>
+                                <span
+                                    class="px-2 py-1 text-xs rounded-md bg-neon-cyan/20 text-neon-cyan border border-neon-cyan/30">Node.js</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 tilt-card-content">
+                        <h3
+                            class="font-display font-bold text-xl text-white mb-2 group-hover:text-neon-cyan transition-colors">
+                            E-Commerce Platform</h3>
+                        <p class="text-gray-400 text-sm mb-4">A full-featured online marketplace with real-time
+                            inventory, payment processing, and admin dashboard.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex gap-3">
+                                <a href="#" class="text-gray-400 hover:text-white transition-colors"><i
+                                        class="fab fa-github"></i></a>
+                                <a href="#" class="text-gray-400 hover:text-white transition-colors"><i
+                                        class="fas fa-external-link-alt"></i></a>
+                            </div>
+                            <span class="text-xs text-gray-500">2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="reveal tilt-card gradient-border overflow-hidden group" style="transition-delay: 0.2s">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-neon-magenta/30 to-neon-violet/30"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-chart-line text-6xl text-white/20"></i>
+                        </div>
+                        <div class="project-img-overlay absolute inset-0"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <div class="flex gap-2">
+                                <span
+                                    class="px-2 py-1 text-xs rounded-md bg-neon-magenta/20 text-neon-magenta border border-neon-magenta/30">Next.js</span>
+                                <span
+                                    class="px-2 py-1 text-xs rounded-md bg-neon-violet/20 text-neon-violet border border-neon-violet/30">TypeScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 tilt-card-content">
+                        <h3
+                            class="font-display font-bold text-xl text-white mb-2 group-hover:text-neon-cyan transition-colors">
+                            Analytics Dashboard</h3>
+                        <p class="text-gray-400 text-sm mb-4">Real-time data visualization platform with customizable
+                            widgets, reporting, and team collaboration.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex gap-3">
+                                <a href="#" class="text-gray-400 hover:text-white transition-colors"><i
+                                        class="fab fa-github"></i></a>
+                                <a href="#" class="text-gray-400 hover:text-white transition-colors"><i
+                                        class="fas fa-external-link-alt"></i></a>
+                            </div>
+                            <span class="text-xs text-gray-500">2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="reveal tilt-card gradient-border overflow-hidden group" style="transition-delay: 0.3s">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-neon-cyan/30 to-blue-500/30"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-comments text-6xl text-white/20"></i>
+                        </div>
+                        <div class="project-img-overlay absolute inset-0"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <div class="flex gap-2">
+                                <span
+                                    class="px-2 py-1 text-xs rounded-md bg-neon-cyan/20 text-neon-cyan border border-neon-cyan/30">Socket.io</span>
+                                <span
+                                    class="px-2 py-1 text-xs rounded-md bg-blue-500/20 text-blue-400 border border-blue-500/30">Express</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 tilt-card-content">
+                        <h3
+                            class="font-display font-bold text-xl text-white mb-2 group-hover:text-neon-cyan transition-colors">
+                            Real-Time Chat App</h3>
+                        <p class="text-gray-400 text-sm mb-4">End-to-end encrypted messaging platform with file sharing,
+                            voice messages, and group channels.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex gap-3">
+                                <a href="#" class="text-gray-400 hover:text-white transition-colors"><i
+                                        class="fab fa-github"></i></a>
+                                <a href="#" class="text-gray-400 hover:text-white transition-colors"><i
+                                        class="fas fa-external-link-alt"></i></a>
+                            </div>
+                            <span class="text-xs text-gray-500">2023</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="reveal tilt-card gradient-border overflow-hidden group" style="transition-delay: 0.1s">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-orange-500/30 to-neon-magenta/30"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-wallet text-6xl text-white/20"></i>
+                        </div>
+                        <div class="project-img-overlay absolute inset-0"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <div class="flex gap-2">
+                                <span
+                                    class="px-2 py-1 text-xs rounded-md bg-orange-500/20 text-orange-400 border border-orange-500/30">React
+                                    Native</span>
+                                <span
+                                    class="px-2 py-1 text-xs rounded-md bg-neon-violet/20 text-neon-violet border border-neon-violet/30">Node.js</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 tilt-card-content">
+                        <h3
+                            class="font-display font-bold text-xl text-white mb-2 group-hover:text-neon-cyan transition-colors">
+                            FinTech Mobile App</h3>
+                        <p class="text-gray-400 text-sm mb-4">Cross-platform mobile banking solution with biometric
+                            auth, transaction tracking, and investment tools.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex gap-3">
+                                <a href="#" class="text-gray-400 hover:text-white transition-colors"><i
+                                        class="fab fa-github"></i></a>
+                                <a href="#" class="text-gray-400 hover:text-white transition-colors"><i
+                                        class="fas fa-external-link-alt"></i></a>
+                            </div>
+                            <span class="text-xs text-gray-500">2023</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="reveal tilt-card gradient-border overflow-hidden group" style="transition-delay: 0.2s">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-green-500/30 to-neon-cyan/30"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-tasks text-6xl text-white/20"></i>
+                        </div>
+                        <div class="project-img-overlay absolute inset-0"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <div class="flex gap-2">
+                                <span
+                                    class="px-2 py-1 text-xs rounded-md bg-green-500/20 text-green-400 border border-green-500/30">Vue.js</span>
+                                <span
+                                    class="px-2 py-1 text-xs rounded-md bg-neon-cyan/20 text-neon-cyan border border-neon-cyan/30">Firebase</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 tilt-card-content">
+                        <h3
+                            class="font-display font-bold text-xl text-white mb-2 group-hover:text-neon-cyan transition-colors">
+                            Project Management Tool</h3>
+                        <p class="text-gray-400 text-sm mb-4">Kanban-style productivity app with drag-and-drop, time
+                            tracking, and team workload visualization.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex gap-3">
+                                <a href="#" class="text-gray-400 hover:text-white transition-colors"><i
+                                        class="fab fa-github"></i></a>
+                                <a href="#" class="text-gray-400 hover:text-white transition-colors"><i
+                                        class="fas fa-external-link-alt"></i></a>
+                            </div>
+                            <span class="text-xs text-gray-500">2023</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="reveal tilt-card gradient-border overflow-hidden group" style="transition-delay: 0.3s">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-neon-violet/30 to-pink-500/30"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-robot text-6xl text-white/20"></i>
+                        </div>
+                        <div class="project-img-overlay absolute inset-0"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <div class="flex gap-2">
+                                <span
+                                    class="px-2 py-1 text-xs rounded-md bg-neon-violet/20 text-neon-violet border border-neon-violet/30">Python</span>
+                                <span
+                                    class="px-2 py-1 text-xs rounded-md bg-pink-500/20 text-pink-400 border border-pink-500/30">AI/ML</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 tilt-card-content">
+                        <h3
+                            class="font-display font-bold text-xl text-white mb-2 group-hover:text-neon-cyan transition-colors">
+                            AI Content Generator</h3>
+                        <p class="text-gray-400 text-sm mb-4">GPT-powered writing assistant with tone adjustment, SEO
+                            optimization, and multi-language support.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex gap-3">
+                                <a href="#" class="text-gray-400 hover:text-white transition-colors"><i
+                                        class="fab fa-github"></i></a>
+                                <a href="#" class="text-gray-400 hover:text-white transition-colors"><i
+                                        class="fas fa-external-link-alt"></i></a>
+                            </div>
+                            <span class="text-xs text-gray-500">2024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-4xl mx-auto"></div>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <p class="text-neon-cyan font-medium mb-2 tracking-widest uppercase text-sm">Insights</p>
+                <h2 class="font-display font-bold text-4xl md:text-5xl text-white mb-4">
+                    Latest from the <span class="gradient-text">Blog</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Thoughts on software engineering, best practices, and
+                    emerging technologies.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Blog 1 -->
+                <article class="reveal blog-card gradient-border overflow-hidden" style="transition-delay: 0.1s">
+                    <div class="relative h-52 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-neon-violet/40 to-deep-purple"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-code-branch text-7xl text-white/10"></i>
+                        </div>
+                        <div class="absolute top-4 left-4">
+                            <span
+                                class="px-3 py-1 text-xs rounded-full bg-neon-violet/20 text-neon-violet border border-neon-violet/30 backdrop-blur-sm">Architecture</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 text-xs text-gray-500 mb-3">
+                            <span><i class="far fa-calendar mr-1"></i> Jan 15, 2024</span>
+                            <span><i class="far fa-clock mr-1"></i> 8 min read</span>
+                        </div>
+                        <h3
+                            class="font-display font-bold text-lg text-white mb-2 hover:text-neon-cyan transition-colors cursor-pointer">
+                            Scaling Node.js Applications: A Complete Guide
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-4">
+                            From clustering to microservices — strategies that helped me handle 10M+ requests daily
+                            without breaking a sweat.
+                        </p>
+                        <a href="#"
+                            class="inline-flex items-center text-neon-cyan text-sm font-medium hover:gap-2 transition-all">
+                            Read More <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog 2 -->
+                <article class="reveal blog-card gradient-border overflow-hidden" style="transition-delay: 0.2s">
+                    <div class="relative h-52 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-neon-cyan/40 to-deep-blue"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-bolt text-7xl text-white/10"></i>
+                        </div>
+                        <div class="absolute top-4 left-4">
+                            <span
+                                class="px-3 py-1 text-xs rounded-full bg-neon-cyan/20 text-neon-cyan border border-neon-cyan/30 backdrop-blur-sm">Performance</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 text-xs text-gray-500 mb-3">
+                            <span><i class="far fa-calendar mr-1"></i> Dec 28, 2023</span>
+                            <span><i class="far fa-clock mr-1"></i> 6 min read</span>
+                        </div>
+                        <h3
+                            class="font-display font-bold text-lg text-white mb-2 hover:text-neon-cyan transition-colors cursor-pointer">
+                            React Performance Optimization Deep Dive
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-4">
+                            Memoization, lazy loading, and rendering patterns that cut our bundle size by 60% and
+                            improved LCP scores dramatically.
+                        </p>
+                        <a href="#"
+                            class="inline-flex items-center text-neon-cyan text-sm font-medium hover:gap-2 transition-all">
+                            Read More <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog 3 -->
+                <article class="reveal blog-card gradient-border overflow-hidden" style="transition-delay: 0.3s">
+                    <div class="relative h-52 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-neon-magenta/40 to-deep-purple"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-shield-alt text-7xl text-white/10"></i>
+                        </div>
+                        <div class="absolute top-4 left-4">
+                            <span
+                                class="px-3 py-1 text-xs rounded-full bg-neon-magenta/20 text-neon-magenta border border-neon-magenta/30 backdrop-blur-sm">Security</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 text-xs text-gray-500 mb-3">
+                            <span><i class="far fa-calendar mr-1"></i> Nov 10, 2023</span>
+                            <span><i class="far fa-clock mr-1"></i> 10 min read</span>
+                        </div>
+                        <h3
+                            class="font-display font-bold text-lg text-white mb-2 hover:text-neon-cyan transition-colors cursor-pointer">
+                            Authentication Patterns for Modern Web Apps
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-4">
+                            JWT vs Sessions, OAuth2 flows, and how to implement secure auth in React/Node.js stacks
+                            without common pitfalls.
+                        </p>
+                        <a href="#"
+                            class="inline-flex items-center text-neon-cyan text-sm font-medium hover:gap-2 transition-all">
+                            Read More <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-4xl mx-auto"></div>
+
+    <!-- Booking Section -->
+    <section id="booking" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <p class="text-neon-cyan font-medium mb-2 tracking-widest uppercase text-sm">Let's Connect</p>
+                <h2 class="font-display font-bold text-4xl md:text-5xl text-white mb-4">
+                    Book a <span class="gradient-text">Meeting</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Whether it's a consultation, code review, or interview — I'd
+                    love to chat. Pick a time that works for you.</p>
+            </div>
+
+            <div class="reveal max-w-4xl mx-auto">
+                <div class="gradient-border p-1">
+                    <div class="bg-deep-purple/40 backdrop-blur-xl rounded-2xl p-6 md:p-8">
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <!-- Calendar -->
+                            <div>
+                                <div class="flex items-center justify-between mb-6">
+                                    <button id="prevMonth"
+                                        class="w-8 h-8 rounded-lg glass flex items-center justify-center text-gray-400 hover:text-white transition-colors">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </button>
+                                    <h3 id="currentMonth" class="font-display font-semibold text-white"></h3>
+                                    <button id="nextMonth"
+                                        class="w-8 h-8 rounded-lg glass flex items-center justify-center text-gray-400 hover:text-white transition-colors">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </button>
+                                </div>
+
+                                <div class="grid grid-cols-7 gap-1 mb-2">
+                                    <div class="text-center text-xs text-gray-500 py-2">Su</div>
+                                    <div class="text-center text-xs text-gray-500 py-2">Mo</div>
+                                    <div class="text-center text-xs text-gray-500 py-2">Tu</div>
+                                    <div class="text-center text-xs text-gray-500 py-2">We</div>
+                                    <div class="text-center text-xs text-gray-500 py-2">Th</div>
+                                    <div class="text-center text-xs text-gray-500 py-2">Fr</div>
+                                    <div class="text-center text-xs text-gray-500 py-2">Sa</div>
+                                </div>
+
+                                <div id="calendarGrid" class="grid grid-cols-7 gap-1">
+                                    <!-- Generated by JS -->
+                                </div>
+                            </div>
+
+                            <!-- Time Slots -->
+                            <div>
+                                <h3 class="font-display font-semibold text-white mb-2">Available Slots</h3>
+                                <p id="selectedDateDisplay" class="text-sm text-gray-400 mb-6">Select a date to see
+                                    available times</p>
+
+                                <div id="timeSlots" class="space-y-2 max-h-80 overflow-y-auto pr-2">
+                                    <div class="text-center text-gray-500 py-8">
+                                        <i class="far fa-calendar-check text-3xl mb-2 opacity-50"></i>
+                                        <p class="text-sm">Select a date first</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Meeting Type -->
+                        <div class="mt-8 pt-6 border-t border-white/10">
+                            <h4 class="text-sm font-medium text-white mb-4">Meeting Type</h4>
+                            <div class="flex flex-wrap gap-3">
+                                <button
+                                    class="meeting-type px-4 py-2 rounded-lg glass text-sm text-gray-300 hover:text-white border border-transparent hover:border-neon-cyan/50 transition-all selected"
+                                    data-type="consultation">
+                                    <i class="fas fa-briefcase mr-2"></i>Consultation
+                                </button>
+                                <button
+                                    class="meeting-type px-4 py-2 rounded-lg glass text-sm text-gray-300 hover:text-white border border-transparent hover:border-neon-cyan/50 transition-all"
+                                    data-type="code-review">
+                                    <i class="fas fa-code mr-2"></i>Code Review
+                                </button>
+                                <button
+                                    class="meeting-type px-4 py-2 rounded-lg glass text-sm text-gray-300 hover:text-white border border-transparent hover:border-neon-cyan/50 transition-all"
+                                    data-type="interview">
+                                    <i class="fas fa-user-tie mr-2"></i>Interview
+                                </button>
+                                <button
+                                    class="meeting-type px-4 py-2 rounded-lg glass text-sm text-gray-300 hover:text-white border border-transparent hover:border-neon-cyan/50 transition-all"
+                                    data-type="general">
+                                    <i class="fas fa-coffee mr-2"></i>General Chat
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-4xl mx-auto"></div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div class="reveal">
+                    <p class="text-neon-cyan font-medium mb-2 tracking-widest uppercase text-sm">Get In Touch</p>
+                    <h2 class="font-display font-bold text-4xl md:text-5xl text-white mb-6">
+                        Let's build something <span class="gradient-text">amazing</span> together
+                    </h2>
+                    <p class="text-gray-400 mb-8 leading-relaxed">
+                        Have a project in mind or want to discuss opportunities? I'm always open to exciting
+                        collaborations,
+                        freelance projects, or full-time roles. Drop me a message and I'll get back within 24 hours.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl glass flex items-center justify-center text-neon-cyan">
+                                <i class="fas fa-envelope text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Email</p>
+                                <p class="text-white font-medium">olanrewaju.ogunkoya@email.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl glass flex items-center justify-center text-neon-magenta">
+                                <i class="fas fa-map-marker-alt text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Location</p>
+                                <p class="text-white font-medium">Available Worldwide (Remote)</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl glass flex items-center justify-center text-neon-violet">
+                                <i class="fas fa-clock text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Response Time</p>
+                                <p class="text-white font-medium">Within 24 hours</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-10 flex gap-4">
+                        <a href="#"
+                            class="w-12 h-12 rounded-xl glass flex items-center justify-center text-gray-400 hover:text-neon-cyan hover:border-neon-cyan/50 border border-transparent transition-all">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="#"
+                            class="w-12 h-12 rounded-xl glass flex items-center justify-center text-gray-400 hover:text-neon-cyan hover:border-neon-cyan/50 border border-transparent transition-all">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#"
+                            class="w-12 h-12 rounded-xl glass flex items-center justify-center text-gray-400 hover:text-neon-cyan hover:border-neon-cyan/50 border border-transparent transition-all">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#"
+                            class="w-12 h-12 rounded-xl glass flex items-center justify-center text-gray-400 hover:text-neon-cyan hover:border-neon-cyan/50 border border-transparent transition-all">
+                            <i class="fab fa-dev text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="reveal" style="transition-delay: 0.2s">
+                    <div class="gradient-border p-1">
+                        <form id="contactForm" onsubmit="handleSubmit(event)"
+                            class="bg-deep-purple/40 backdrop-blur-xl rounded-2xl p-8 space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-300 mb-2">Name</label>
+                                    <input type="text" id="clientName"
+                                        class="form-input w-full px-4 py-3 rounded-xl text-white placeholder-gray-500"
+                                        placeholder="John Doe" required>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                                    <input type="email" id="clientEmail"
+                                        class="form-input w-full px-4 py-3 rounded-xl text-white placeholder-gray-500"
+                                        placeholder="john@example.com" required>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-2">Subject</label>
+                                <input type="text" id="clientSubject"
+                                    class="form-input w-full px-4 py-3 rounded-xl text-white placeholder-gray-500"
+                                    placeholder="Project Collaboration" required>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-2">Message</label>
+                                <textarea id="clientMessage" rows="5"
+                                    class="form-input w-full px-4 py-3 rounded-xl text-white placeholder-gray-500 resize-none"
+                                    placeholder="Tell me about your project..." required></textarea>
+                            </div>
+
+                            <button type="submit"
+                                class="magnetic-btn w-full py-4 rounded-xl bg-gradient-to-r from-neon-violet to-neon-cyan text-void font-bold hover:shadow-2xl hover:shadow-neon-violet/30 transition-all flex items-center justify-center gap-2">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+
+                        <script>
+                            const FORM_PHONE = "2347069168574";
+
+                            function handleSubmit(e) {
+                                e.preventDefault();
+
+                                const name = document.getElementById('clientName').value.trim();
+                                const email = document.getElementById('clientEmail').value.trim();
+                                const subject = document.getElementById('clientSubject').value.trim();
+                                const message = document.getElementById('clientMessage').value.trim();
+
+                                const text = `*New Message*%0A%0A` +
+                                    `*Name:* ${name}%0A` +
+                                    `*Email:* ${email}%0A` +
+                                    `*Subject:* ${subject}%0A` +
+                                    `*Message:* ${message}`;
+
+                                window.open(`https://wa.me/${FORM_PHONE}?text=${text}`, '_blank');
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <span class="font-display font-bold text-2xl gradient-text">OO</span>
+                    <span class="text-gray-500 text-sm">Olanrewaju Ogunkoya</span>
+                </div>
+
+                <div class="flex items-center gap-8">
+                    <a href="#about" class="text-sm text-gray-400 hover:text-white transition-colors">About</a>
+                    <a href="#projects" class="text-sm text-gray-400 hover:text-white transition-colors">Projects</a>
+                    <a href="#blog" class="text-sm text-gray-400 hover:text-white transition-colors">Blog</a>
+                    <a href="#contact" class="text-sm text-gray-400 hover:text-white transition-colors">Contact</a>
+                </div>
+
+                <div class="text-sm text-gray-600">
+                    © 2024 Olanrewaju Ogunkoya. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Success Modal -->
+    <div id="bookingModal"
+        class="modal-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+        <div class="modal-content gradient-border max-w-md w-full">
+            <div class="bg-deep-purple/90 backdrop-blur-xl rounded-2xl p-8 text-center">
+                <div
+                    class="w-16 h-16 rounded-full bg-gradient-to-r from-neon-violet to-neon-cyan flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-check text-void text-2xl"></i>
+                </div>
+                <h3 class="font-display font-bold text-2xl text-white mb-2">Booking Confirmed!</h3>
+                <p class="text-gray-400 mb-6">Your meeting has been scheduled. You'll receive a calendar invite shortly.
+                </p>
+                <div class="glass rounded-xl p-4 mb-6 text-left">
+                    <div class="flex items-center gap-3 mb-2">
+                        <i class="far fa-calendar text-neon-cyan"></i>
+                        <span id="modalDate" class="text-white text-sm"></span>
+                    </div>
+                    <div class="flex items-center gap-3 mb-2">
+                        <i class="far fa-clock text-neon-cyan"></i>
+                        <span id="modalTime" class="text-white text-sm"></span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-video text-neon-cyan"></i>
+                        <span id="modalType" class="text-white text-sm"></span>
+                    </div>
+                </div>
+                <button id="closeModal"
+                    class="px-8 py-3 rounded-full bg-gradient-to-r from-neon-violet to-neon-cyan text-void font-bold hover:shadow-lg hover:shadow-neon-violet/30 transition-all">
+                    Awesome!
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Success Modal -->
+    <div id="contactModal"
+        class="modal-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+        <div class="modal-content gradient-border max-w-md w-full">
+            <div class="bg-deep-purple/90 backdrop-blur-xl rounded-2xl p-8 text-center">
+                <div
+                    class="w-16 h-16 rounded-full bg-gradient-to-r from-neon-cyan to-neon-violet flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-paper-plane text-void text-2xl"></i>
+                </div>
+                <h3 class="font-display font-bold text-2xl text-white mb-2">Message Sent!</h3>
+                <p class="text-gray-400 mb-6">Thanks for reaching out. I'll get back to you within 24 hours.</p>
+                <button id="closeContactModal"
+                    class="px-8 py-3 rounded-full bg-gradient-to-r from-neon-violet to-neon-cyan text-void font-bold hover:shadow-lg hover:shadow-neon-violet/30 transition-all">
+                    Got it!
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ============================================
+        // TYPING EFFECT
+        // ============================================
+        const words = ["scalable web apps", "beautiful interfaces", "robust APIs", "digital experiences"];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typingElement = document.getElementById('typingText');
+
+        function type() {
+            const currentWord = words[wordIndex];
+
+            if (isDeleting) {
+                typingElement.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingElement.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let typeSpeed = isDeleting ? 50 : 100;
+
+            if (!isDeleting && charIndex === currentWord.length) {
+                typeSpeed = 2000;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(type, typeSpeed);
+        }
+        type();
+
+        // ============================================
+        // CURSOR GLOW
+        // ============================================
+        const cursorGlow = document.getElementById('cursorGlow');
+        let mouseX = 0, mouseY = 0;
+        let glowX = 0, glowY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        function animateGlow() {
+            glowX += (mouseX - glowX) * 0.1;
+            glowY += (mouseY - glowY) * 0.1;
+            cursorGlow.style.left = glowX + 'px';
+            cursorGlow.style.top = glowY + 'px';
+            requestAnimationFrame(animateGlow);
+        }
+        animateGlow();
+
+        // ============================================
+        // NAVBAR SCROLL EFFECT
+        // ============================================
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('glass-strong');
+            } else {
+                navbar.classList.remove('glass-strong');
+            }
+        });
+
+        // ============================================
+        // MOBILE MENU
+        // ============================================
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const closeMobileMenu = document.getElementById('closeMobileMenu');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.add('open'));
+        closeMobileMenu.addEventListener('click', () => mobileMenu.classList.remove('open'));
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+        });
+
+        // ============================================
+        // SCROLL REVEAL
+        // ============================================
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+
+                    // Animate skill bars if inside
+                    const skillBars = entry.target.querySelectorAll('.skill-bar-fill');
+                    skillBars.forEach(bar => {
+                        setTimeout(() => bar.classList.add('active'), 200);
+                    });
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // ============================================
+        // 3D TILT CARDS
+        // ============================================
+        const tiltCards = document.querySelectorAll('.tilt-card');
+
+        tiltCards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = (y - centerY) / 20;
+                const rotateY = (centerX - x) / 20;
+
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+            });
+        });
+
+        // ============================================
+        // MAGNETIC BUTTONS
+        // ============================================
+        const magneticBtns = document.querySelectorAll('.magnetic-btn');
+
+        magneticBtns.forEach(btn => {
+            btn.addEventListener('mousemove', (e) => {
+                const rect = btn.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+            });
+
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = 'translate(0, 0)';
+            });
+        });
+
+        // ============================================
+        // CALENDAR & BOOKING SYSTEM
+        // ============================================
+        const calendarGrid = document.getElementById('calendarGrid');
+        const currentMonthEl = document.getElementById('currentMonth');
+        const prevMonthBtn = document.getElementById('prevMonth');
+        const nextMonthBtn = document.getElementById('nextMonth');
+        const timeSlotsEl = document.getElementById('timeSlots');
+        const selectedDateDisplay = document.getElementById('selectedDateDisplay');
+        const bookingModal = document.getElementById('bookingModal');
+        const closeModalBtn = document.getElementById('closeModal');
+
+        let currentDate = new Date();
+        let selectedDate = null;
+        let selectedTime = null;
+        let selectedMeetingType = 'consultation';
+
+        const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+            'July', 'August', 'September', 'October', 'November', 'December'];
+
+        const timeSlots = [
+            '09:00 AM', '09:30 AM', '10:00 AM', '10:30 AM', '11:00 AM', '11:30 AM',
+            '01:00 PM', '01:30 PM', '02:00 PM', '02:30 PM', '03:00 PM', '03:30 PM', '04:00 PM'
+        ];
+
+        function renderCalendar() {
+            const year = currentDate.getFullYear();
+            const month = currentDate.getMonth();
+
+            currentMonthEl.textContent = `${monthNames[month]} ${year}`;
+            calendarGrid.innerHTML = '';
+
+            const firstDay = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            const today = new Date();
+
+            // Empty cells
+            for (let i = 0; i < firstDay; i++) {
+                const emptyCell = document.createElement('div');
+                calendarGrid.appendChild(emptyCell);
+            }
+
+            // Days
+            for (let day = 1; day <= daysInMonth; day++) {
+                const cell = document.createElement('button');
+                cell.className = 'calendar-day w-10 h-10 rounded-lg text-sm font-medium flex items-center justify-center';
+                cell.textContent = day;
+
+                const date = new Date(year, month, day);
+                const isToday = date.toDateString() === today.toDateString();
+                const isPast = date < new Date(today.setHours(0, 0, 0, 0));
+                const isSelected = selectedDate && date.toDateString() === selectedDate.toDateString();
+
+                if (isPast) {
+                    cell.classList.add('disabled');
+                } else if (isSelected) {
+                    cell.classList.add('selected');
+                } else if (isToday) {
+                    cell.classList.add('bg-neon-cyan/20', 'text-neon-cyan', 'border', 'border-neon-cyan/30');
+                } else {
+                    cell.classList.add('text-gray-300', 'hover:bg-white/5');
+                }
+
+                if (!isPast) {
+                    cell.addEventListener('click', () => selectDate(date));
+                }
+
+                calendarGrid.appendChild(cell);
+            }
+        }
+
+        function selectDate(date) {
+            selectedDate = date;
+            selectedTime = null;
+            renderCalendar();
+            renderTimeSlots();
+
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            selectedDateDisplay.textContent = date.toLocaleDateString('en-US', options);
+        }
+
+        function renderTimeSlots() {
+            if (!selectedDate) return;
+
+            timeSlotsEl.innerHTML = '';
+
+            timeSlots.forEach((time, index) => {
+                const slot = document.createElement('button');
+                slot.className = 'time-slot w-full px-4 py-3 rounded-lg text-left text-sm text-gray-300 flex items-center justify-between';
+                slot.innerHTML = `
+                    <span>${time}</span>
+                    <span class="text-xs text-gray-500">30 min</span>
+                `;
+
+                // Randomly disable some slots for realism
+                if (Math.random() > 0.7) {
+                    slot.classList.add('opacity-30', 'cursor-not-allowed');
+                    slot.disabled = true;
+                    slot.querySelector('span:last-child').textContent = 'Booked';
+                    slot.querySelector('span:last-child').classList.add('text-red-400');
+                } else {
+                    slot.addEventListener('click', () => selectTime(slot, time));
+                }
+
+                timeSlotsEl.appendChild(slot);
+            });
+        }
+
+        function selectTime(element, time) {
+            document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('selected'));
+            element.classList.add('selected');
+            selectedTime = time;
+
+            // Show booking confirmation after short delay
+            setTimeout(() => {
+                showBookingModal();
+            }, 400);
+        }
+
+        function showBookingModal() {
+            if (!selectedDate || !selectedTime) return;
+
+            document.getElementById('modalDate').textContent = selectedDate.toLocaleDateString('en-US', {
+                weekday: 'long', month: 'long', day: 'numeric', year: 'numeric'
+            });
+            document.getElementById('modalTime').textContent = selectedTime + ' (30 minutes)';
+            document.getElementById('modalType').textContent = selectedMeetingType.charAt(0).toUpperCase() + selectedMeetingType.slice(1).replace('-', ' ');
+
+            bookingModal.classList.add('open');
+        }
+
+        prevMonthBtn.addEventListener('click', () => {
+            currentDate.setMonth(currentDate.getMonth() - 1);
+            renderCalendar();
+        });
+
+        nextMonthBtn.addEventListener('click', () => {
+            currentDate.setMonth(currentDate.getMonth() + 1);
+            renderCalendar();
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            bookingModal.classList.remove('open');
+        });
+
+        bookingModal.addEventListener('click', (e) => {
+            if (e.target === bookingModal) bookingModal.classList.remove('open');
+        });
+
+        // Meeting type selection
+        document.querySelectorAll('.meeting-type').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.meeting-type').forEach(b => {
+                    b.classList.remove('selected', 'border-neon-cyan/50', 'text-white');
+                    b.classList.add('border-transparent', 'text-gray-300');
+                });
+                btn.classList.add('selected', 'border-neon-cyan/50', 'text-white');
+                btn.classList.remove('border-transparent', 'text-gray-300');
+                selectedMeetingType = btn.dataset.type;
+            });
+        });
+
+        // Initialize calendar
+        renderCalendar();
+
+        // ============================================
+        // CONTACT FORM
+        // ============================================
+        const contactForm = document.getElementById('contactForm');
+        const contactModal = document.getElementById('contactModal');
+        const closeContactModalBtn = document.getElementById('closeContactModal');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            contactModal.classList.add('open');
+            contactForm.reset();
+        });
+
+        closeContactModalBtn.addEventListener('click', () => {
+            contactModal.classList.remove('open');
+        });
+
+        contactModal.addEventListener('click', (e) => {
+            if (e.target === contactModal) contactModal.classList.remove('open');
+        });
+
+        // ============================================
+        // SMOOTH SCROLL
+        // ============================================
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+
+        // ============================================
+        // PARALLAX EFFECT FOR ORBS
+        // ============================================
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const orbs = document.querySelectorAll('.orb');
+            orbs.forEach((orb, index) => {
+                const speed = 0.5 + (index * 0.2);
+                orb.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+        const revealObs = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+    </script>
+</body>
+
+</html>
